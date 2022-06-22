@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>View Arr</title>
+        
+    </head>
+
+    <body>
+        <table border='1'>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                {{#each data}}
+                    
+                    <tr>
+                        {{!-- at index means the environment variable --}}
+                        <td>{{@index}}</td>
+                        <td>{{name}}</td>
+                        <td>{{age}}</td>
+                    </tr>
+                    {{!-- you could use else for each --}}
+                {{else}}
+                        <tr>
+                        <td colspan="5">No Data Available</td>
+                    </tr>
+                {{/each}}
+        </table>
+         {{!-- used when there is no data needed to be passed to partial --}}
+         {{!-- {{> welcome}} --}}
+    </body>
+</html>
